@@ -2,16 +2,13 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public Transform player; // Cam AR 
+    public float speed;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        Vector3 direction = player.position - transform.position;
+        transform.LookAt(player);
+        transform.position += direction.normalized * speed * Time.deltaTime;
     }
 }
-//directioncam.pos - bicho.pos
