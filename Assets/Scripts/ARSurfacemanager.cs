@@ -7,11 +7,13 @@ public class ARSurfacemanager : MonoBehaviour
     [SerializeField]
     private ARPlaneManager planeManager;
     [SerializeField]
-    private GameObject prefab;
+    private GameObject[] prefabs;
     [SerializeField]
     private GameObject canvasUI;
     private bool planeVisibility = true;
     private PlayerInput playerInput;
+
+    private int selectedIndex; 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,7 +41,7 @@ public class ARSurfacemanager : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 Debug.Log("Choco contra " + hit.transform.name);
-                Instantiate(prefab, hit.point, Quaternion.identity);
+                Instantiate(prefabs[selectedIndex], hit.point, Quaternion.identity);
             }
         }
     }
@@ -48,5 +50,10 @@ public class ARSurfacemanager : MonoBehaviour
     {
         canvasUI.SetActive(false);  
         planeVisibility = !planeVisibility;
+    }
+
+    public void SelectObject(int index) 
+    {
+        selectedIndex = index;
     }
 }

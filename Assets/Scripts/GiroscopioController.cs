@@ -22,7 +22,6 @@ public class GiroscopioController : MonoBehaviour
             //cam.rotation = new Quaternion(inputGyro.x, inputGyro.y, - inputGyro.z, -inputGyro.w);
 
             Quaternion correcionGiro = Quaternion.Euler (90, 0, 0);
-
             cam.rotation = correcionGiro * new Quaternion(inputGyro.x, inputGyro.y, -inputGyro.z, -inputGyro.w);
         }
     }

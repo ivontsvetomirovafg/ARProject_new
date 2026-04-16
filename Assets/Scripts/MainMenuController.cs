@@ -6,31 +6,38 @@ public class MainMenuController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField]  
     private GameObject selectGame; 
+    [SerializeField]  
+    private GameObject bananaCat; 
 
     void Start()
     {
-        selectGame.SetActive(false);
+        //selectGame.SetActive(false);
+        //selectGame.SetActive(true);
     }
-
-    // Botón Play
     public void PlayButton()
     {
         selectGame.SetActive(true);
+        bananaCat.SetActive(false);
     }
 
     // Botones de juegos
     public void Game1()
     {
-        SceneManager.LoadScene("Game1");
+        SceneManager.LoadScene("FakeAR");
     }
     
     public void Game2()
     {
-        SceneManager.LoadScene("Game2");
+        SceneManager.LoadScene("TrackingImage");
     }
     
     public void Game3()
     {
-        SceneManager.LoadScene("Game3");
+        SceneManager.LoadScene("TrackingSurface");
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
     }
 }
