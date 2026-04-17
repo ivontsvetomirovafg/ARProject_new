@@ -10,6 +10,8 @@ public class TrackImageScript : MonoBehaviour
     private ARObjects[] objetosAR;
 
     private GameObject prefabCopy;
+    private GameObject prefabCopy2;
+
 
     private void OnEnable()
     {
@@ -21,6 +23,13 @@ public class TrackImageScript : MonoBehaviour
     {
         trackedImageManager.trackablesChanged.RemoveListener(OnTrackedChanged);
     }
+    private void Update()
+    {
+        if (prefabCopy != null && prefabCopy2 != null)
+        {
+            //mirar y pegar (anim)
+        }
+    }
 
     void OnTrackedChanged(ARTrackablesChangedEventArgs<ARTrackedImage> eventargs)
     {
@@ -30,7 +39,14 @@ public class TrackImageScript : MonoBehaviour
             {
                 if (objetosAR[i].referenceImageName == newImage.referenceImage.name)
                 {
-                    prefabCopy = Instantiate(objetosAR[i].prefab, newImage.transform.position, newImage.transform.rotation);
+                    if (prefabCopy == null)
+                    {
+                        prefabCopy = Instantiate(objetosAR[i].prefab, newImage.transform.position, newImage.transform.rotation);
+                    }
+                    else
+                    {
+                        prefabCopy2 = Instantiate(objetosAR[i].prefab, newImage.transform.position, newImage.transform.rotation);
+                    }
                 }
             }
             
