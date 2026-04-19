@@ -4,6 +4,9 @@ public class GiroscopioController : MonoBehaviour
 {
     [SerializeField]
     private Transform cam;
+    public int life;
+    [SerializeField]
+    public GameObject gameOver;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,6 +28,7 @@ public class GiroscopioController : MonoBehaviour
             cam.rotation = correcionGiro * new Quaternion(inputGyro.x, inputGyro.y, -inputGyro.z, -inputGyro.w);
         }
     }
+
     public void Shoot()
     {
         Ray ray = Camera.main.ViewportPointToRay(new Vector2(0.5f, 0.5f));
@@ -36,6 +40,17 @@ public class GiroscopioController : MonoBehaviour
             {
                 Destroy(hit.transform.gameObject);
             }
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        life -= damage;
+        //Debug.Log("Vida: " + life); // Hacer barra de vida
+
+        if (life <= 0)
+        {
+            gameOver.SetActive(true);
         }
     }
 }
