@@ -1757,6 +1757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
   panelGameOver: {fileID: 0}
   panelPause: {fileID: 743801545}
+  life: []
 --- !u!4 &1439141755
 Transform:
   m_ObjectHideFlags: 0

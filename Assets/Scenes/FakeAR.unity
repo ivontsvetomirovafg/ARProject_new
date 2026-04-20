@@ -205,6 +205,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2876661481117778214, guid: 347ba67bf14c1544c89f90706a20b826, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 5252520800117904997, guid: 347ba67bf14c1544c89f90706a20b826, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.6
@@ -244,6 +248,22 @@ PrefabInstance:
     - target: {fileID: 5252520800117904997, guid: 347ba67bf14c1544c89f90706a20b826, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234486406117697578, guid: 347ba67bf14c1544c89f90706a20b826, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344893070149942676, guid: 347ba67bf14c1544c89f90706a20b826, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561997990069353688, guid: 347ba67bf14c1544c89f90706a20b826, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8671268947772049517, guid: 347ba67bf14c1544c89f90706a20b826, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8674848853946440248, guid: 347ba67bf14c1544c89f90706a20b826, type: 3}
       propertyPath: m_Name
@@ -287,8 +307,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   player: {fileID: 1664421172}
-  speed: 2
-  "distDa\xF1o": 0.5
 --- !u!1 &627367912 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2681624097373102229, guid: de61416e7cff1db4eaf0efe0e510b355, type: 3}
@@ -337,10 +355,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
   panelGameOver: {fileID: 1489494297}
   panelPause: {fileID: 429518921}
-  life:
-  - {fileID: 1557525393}
-  - {fileID: 1512049418}
-  - {fileID: 1785962619}
 --- !u!4 &628569369
 Transform:
   m_ObjectHideFlags: 0
@@ -810,8 +824,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   player: {fileID: 1664421172}
-  speed: 2
-  "distDa\xF1o": 0.5
 --- !u!1 &1286783895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1802,8 +1814,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   player: {fileID: 1664421172}
-  speed: 2
-  "distDa\xF1o": 0.5
 --- !u!1 &1785962619
 GameObject:
   m_ObjectHideFlags: 0
@@ -1897,8 +1907,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   player: {fileID: 1664421172}
-  speed: 2
-  "distDa\xF1o": 0.5
 --- !u!1 &1996386778
 GameObject:
   m_ObjectHideFlags: 0
@@ -2044,8 +2052,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   player: {fileID: 1664421172}
-  speed: 2
-  "distDa\xF1o": 0.5
 --- !u!1 &2061232813 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8442246893703814894, guid: ae96b76dfb8834b40b9334ac7b9e61fe, type: 3}
@@ -2066,6 +2072,10 @@ MonoBehaviour:
   cam: {fileID: 1664421172}
   life: 0
   gameOver: {fileID: 0}
+  heart:
+  - {fileID: 1785962619}
+  - {fileID: 1512049418}
+  - {fileID: 1557525393}
 --- !u!1 &2073364160
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public Transform player; // cam
-    public float speed;
-    public float distDaño;
+    [SerializeField]
+    private Transform player; // cam
+    private float speed;
+    private float distDaño;
 
     void Update()
     {

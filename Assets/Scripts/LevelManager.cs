@@ -1,3 +1,5 @@
+using System.Collections;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,8 +9,6 @@ public class LevelManager : MonoBehaviour
     private GameObject panelGameOver;
     [SerializeField] 
     private GameObject panelPause;
-    [SerializeField]
-    private GameObject[] life;
 
     private void Awake()
     {

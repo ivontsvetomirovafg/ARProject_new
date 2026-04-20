@@ -7,6 +7,8 @@ public class GiroscopioController : MonoBehaviour
     public int life;
     [SerializeField]
     public GameObject gameOver;
+    [SerializeField]
+    private GameObject[] heart;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -46,7 +48,7 @@ public class GiroscopioController : MonoBehaviour
     public void TakeDamage(int damage)
     {
         life -= damage;
-        //Debug.Log("Vida: " + life); // Hacer barra de vida
+        heart[life].SetActive(false);
 
         if (life <= 0)
         {

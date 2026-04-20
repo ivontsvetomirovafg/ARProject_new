@@ -6,13 +6,24 @@ using System.Collections;
 public class TrackImageScript : MonoBehaviour
 {
     private bool pelea = false;
+    private bool pelea2 = false;
+    private bool pelea3 = false;
     [SerializeField]
     private ARTrackedImageManager trackedImageManager;
     [SerializeField]
     private ARObjects[] objetosAR;
 
+    [Header ("Primera pelea")]
     private GameObject prefabCopy;
     private GameObject prefabCopy2;
+
+    [Header ("Segunda pelea")]
+    private GameObject prefabCopy3;
+    private GameObject prefabCopy4;
+
+    [Header ("Tercera pelea")]
+    private GameObject prefabCopy5;
+    private GameObject prefabCopy6;
 
     //Animaciones
     private Animator animator1;
@@ -41,6 +52,30 @@ public class TrackImageScript : MonoBehaviour
             animator1.SetBool("Fight", true);
             animator2.SetBool("Fight", true);
         }
+
+        if (prefabCopy3 != null && prefabCopy4 != null && pelea2 == false)
+        {
+            pelea2 = true;
+            StartCoroutine(Pelea());
+
+            prefabCopy3.transform.LookAt(prefabCopy4.transform);
+            prefabCopy4.transform.LookAt(prefabCopy3.transform);
+
+            animator1.SetBool("Fight", true);
+            animator2.SetBool("Fight", true);
+        }
+
+        if (prefabCopy5 != null && prefabCopy6 != null && pelea3 == false)
+        {
+            pelea3 = true;
+            StartCoroutine(Pelea());
+
+            prefabCopy5.transform.LookAt(prefabCopy6.transform);
+            prefabCopy6.transform.LookAt(prefabCopy5.transform);
+
+            animator1.SetBool("Fight", true);
+            animator2.SetBool("Fight", true);
+        }
     }
     IEnumerator Pelea()
     {
@@ -65,10 +100,30 @@ public class TrackImageScript : MonoBehaviour
                         prefabCopy = Instantiate(objetosAR[i].prefab, newImage.transform.position, newImage.transform.rotation);
                         animator1 = prefabCopy.GetComponent<Animator>();
                     }
-                    else
+                    else if (prefabCopy2 == null)
                     {
                         prefabCopy2 = Instantiate(objetosAR[i].prefab, newImage.transform.position, newImage.transform.rotation);
                         animator2 = prefabCopy2.GetComponent<Animator>();
+                    }
+                    else if (prefabCopy3 == null)
+                    {
+                        prefabCopy3 = Instantiate(objetosAR[i].prefab, newImage.transform.position, newImage.transform.rotation);
+                        animator1 = prefabCopy3.GetComponent<Animator>();
+                    }
+                    else if (prefabCopy4 == null)
+                    {
+                        prefabCopy4 = Instantiate(objetosAR[i].prefab, newImage.transform.position, newImage.transform.rotation);
+                        animator2 = prefabCopy4.GetComponent<Animator>();
+                    }
+                    else if (prefabCopy5 == null)
+                    {
+                        prefabCopy5 = Instantiate(objetosAR[i].prefab, newImage.transform.position, newImage.transform.rotation);
+                        animator1 = prefabCopy5.GetComponent<Animator>();
+                    }
+                    else 
+                    {
+                        prefabCopy6 = Instantiate(objetosAR[i].prefab, newImage.transform.position, newImage.transform.rotation);
+                        animator2 = prefabCopy6.GetComponent<Animator>();
                     }
                 }
             }
