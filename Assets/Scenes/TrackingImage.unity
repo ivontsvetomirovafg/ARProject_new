@@ -840,13 +840,13 @@ MonoBehaviour:
     prefab: {fileID: 5794420600716261374, guid: b6ad716f4b5681a41921cabf7dcbd910, type: 3}
   - referenceImageName: robloxNoob
     prefab: {fileID: 6200621778274356589, guid: 9ff8082df9cd4414dbfafff6d3e2a789, type: 3}
-  - referenceImageName: sonicExe
+  - referenceImageName: spiderMan
     prefab: {fileID: 5794420600716261374, guid: b6ad716f4b5681a41921cabf7dcbd910, type: 3}
-  - referenceImageName: robloxNoob
+  - referenceImageName: subZero
     prefab: {fileID: 6200621778274356589, guid: 9ff8082df9cd4414dbfafff6d3e2a789, type: 3}
-  - referenceImageName: sonicExe
+  - referenceImageName: rick
     prefab: {fileID: 5794420600716261374, guid: b6ad716f4b5681a41921cabf7dcbd910, type: 3}
-  - referenceImageName: robloxNoob
+  - referenceImageName: shrek
     prefab: {fileID: 6200621778274356589, guid: 9ff8082df9cd4414dbfafff6d3e2a789, type: 3}
 --- !u!1 &933738777
 GameObject:
@@ -1492,6 +1492,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8207557910595253773, guid: da7973b53d795634c9e90ae76900f405, type: 3}
       insertIndex: -1
       addedObject: {fileID: 163992342}
+    - targetCorrespondingSourceObject: {fileID: 8207557910595253773, guid: da7973b53d795634c9e90ae76900f405, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: da7973b53d795634c9e90ae76900f405, type: 3}
 --- !u!114 &1369269945 stripped
 MonoBehaviour:

@@ -9,6 +9,13 @@ public class GiroscopioController : MonoBehaviour
     public GameObject gameOver;
     [SerializeField]
     private GameObject[] heart;
+    [SerializeField]
+    private float tiempoSpawn;
+    private float timePass;
+    [SerializeField]
+    private float minimX, minimZ, maxX, maxZ;
+    [SerializeField]
+    private GameObject[] marcianito;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,6 +35,19 @@ public class GiroscopioController : MonoBehaviour
 
             Quaternion correcionGiro = Quaternion.Euler (90, 0, 0);
             cam.rotation = correcionGiro * new Quaternion(inputGyro.x, inputGyro.y, -inputGyro.z, -inputGyro.w);
+        }
+    }
+    private void Update()
+    {
+        timePass += Time.deltaTime;
+        if (timePass >= tiempoSpawn)
+        {
+            timePass = 0;
+            float x = Random.Range(minimX, maxX);
+            float z = Random.Range(minimZ, maxZ);
+
+            int marcianitoCogido = Random.Range (0, marcianito.Length);
+            Instantiate(marcianito[marcianitoCogido], new Vector3 (x, 0, z), Quaternion.identity);
         }
     }
 

@@ -37,3 +37,43 @@ MonoBehaviour:
     m_SpecifySize: 0
     m_Name: robloxNoob
     m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4856505723500302169
+      m_GuidHigh: 18188891776075376564
+    m_SerializedTextureGuid:
+      m_GuidLow: 3595245151822309111
+      m_GuidHigh: 15034055527945137898
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: shrek
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5508184401388915529
+      m_GuidHigh: 14933377225001104034
+    m_SerializedTextureGuid:
+      m_GuidLow: 12705847030674057878
+      m_GuidHigh: 12724481927588052104
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: rick
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5369156510318268660
+      m_GuidHigh: 2641439477924265355
+    m_SerializedTextureGuid:
+      m_GuidLow: 1217113219939327162
+      m_GuidHigh: 10302709388937640491
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: descarga (15)
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4886069837265708110
+      m_GuidHigh: 68720899048766612
+    m_SerializedTextureGuid:
+      m_GuidLow: 3428613793343150722
+      m_GuidHigh: 15108808304083648584
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: subZero
+    m_Texture: {fileID: 0}

@@ -17,9 +17,10 @@ public class EnemyController : MonoBehaviour
 
         if (distance < distDaño)
         {   
-            Debug.Log("Te ha golpeado el enemigo");
-            //Quitar vidaa
+            Debug.Log("Te ha golpeado el enemigo jaja");
+            //TakeDamage();
             Destroy(gameObject);
         }
+
     }
 }
