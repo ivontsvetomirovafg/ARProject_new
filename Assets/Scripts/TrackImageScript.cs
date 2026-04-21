@@ -8,6 +8,7 @@ public class TrackImageScript : MonoBehaviour
     private bool pelea = false;
     private bool pelea2 = false;
     private bool pelea3 = false;
+
     [SerializeField]
     private ARTrackedImageManager trackedImageManager;
     [SerializeField]
@@ -28,6 +29,10 @@ public class TrackImageScript : MonoBehaviour
     //Animaciones
     private Animator animator1;
     private Animator animator2;
+    private Animator animator3;
+    private Animator animator4;
+    private Animator animator5;
+    private Animator animator6;
 
     private void OnEnable()
     {
@@ -56,25 +61,25 @@ public class TrackImageScript : MonoBehaviour
         if (prefabCopy3 != null && prefabCopy4 != null && pelea2 == false)
         {
             pelea2 = true;
-            StartCoroutine(Pelea());
+            StartCoroutine(Pelea2());
 
             prefabCopy3.transform.LookAt(prefabCopy4.transform);
             prefabCopy4.transform.LookAt(prefabCopy3.transform);
 
-            animator1.SetBool("Fight", true);
-            animator2.SetBool("Fight", true);
+            animator3.SetBool("Fight", true);
+            animator4.SetBool("Fight", true);
         }
 
         if (prefabCopy5 != null && prefabCopy6 != null && pelea3 == false)
         {
             pelea3 = true;
-            StartCoroutine(Pelea());
+            StartCoroutine(Pelea3());
 
             prefabCopy5.transform.LookAt(prefabCopy6.transform);
             prefabCopy6.transform.LookAt(prefabCopy5.transform);
 
-            animator1.SetBool("Fight", true);
-            animator2.SetBool("Fight", true);
+            animator5.SetBool("Fight", true);
+            animator6.SetBool("Fight", true);
         }
     }
     IEnumerator Pelea()
@@ -85,7 +90,25 @@ public class TrackImageScript : MonoBehaviour
 
         animator2.SetTrigger("Win");
         animator1.SetTrigger("Die");
-}
+    }
+    IEnumerator Pelea2()
+    {
+        yield return new WaitForSeconds(15f);
+        animator3.SetBool("Fight", false);
+        animator4.SetBool("Fight", false);
+
+        animator4.SetTrigger("Win");
+        animator3.SetTrigger("Die");
+    }
+    IEnumerator Pelea3()
+    {
+        yield return new WaitForSeconds(15f);
+        animator5.SetBool("Fight", false);
+        animator6.SetBool("Fight", false);
+
+        animator6.SetTrigger("Win");
+        animator5.SetTrigger("Die");
+    }
 
     void OnTrackedChanged(ARTrackablesChangedEventArgs<ARTrackedImage> eventargs)
     {
@@ -108,22 +131,22 @@ public class TrackImageScript : MonoBehaviour
                     else if (prefabCopy3 == null)
                     {
                         prefabCopy3 = Instantiate(objetosAR[i].prefab, newImage.transform.position, newImage.transform.rotation);
-                        animator1 = prefabCopy3.GetComponent<Animator>();
+                        animator3 = prefabCopy3.GetComponent<Animator>();
                     }
                     else if (prefabCopy4 == null)
                     {
                         prefabCopy4 = Instantiate(objetosAR[i].prefab, newImage.transform.position, newImage.transform.rotation);
-                        animator2 = prefabCopy4.GetComponent<Animator>();
+                        animator4 = prefabCopy4.GetComponent<Animator>();
                     }
                     else if (prefabCopy5 == null)
                     {
                         prefabCopy5 = Instantiate(objetosAR[i].prefab, newImage.transform.position, newImage.transform.rotation);
-                        animator1 = prefabCopy5.GetComponent<Animator>();
+                        animator5 = prefabCopy5.GetComponent<Animator>();
                     }
                     else 
                     {
                         prefabCopy6 = Instantiate(objetosAR[i].prefab, newImage.transform.position, newImage.transform.rotation);
-                        animator2 = prefabCopy6.GetComponent<Animator>();
+                        animator6 = prefabCopy6.GetComponent<Animator>();
                     }
                 }
             }
