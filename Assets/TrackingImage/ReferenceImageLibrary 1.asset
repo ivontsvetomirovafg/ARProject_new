@@ -65,7 +65,7 @@ MonoBehaviour:
       m_GuidHigh: 10302709388937640491
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: descarga (15)
+    m_Name: spiderMan
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 4886069837265708110

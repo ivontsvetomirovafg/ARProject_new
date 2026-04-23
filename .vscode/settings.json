@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "ARProject_IVON.slnx"
+    "dotnet.defaultSolution": "ARProject_new.slnx"
 }

@@ -106,8 +106,8 @@ public class TrackImageScript : MonoBehaviour
         animator5.SetBool("Fight", false);
         animator6.SetBool("Fight", false);
 
-        animator6.SetTrigger("Win");
-        animator5.SetTrigger("Die");
+        animator5.SetTrigger("Win");
+        animator6.SetTrigger("Die");
     }
 
     void OnTrackedChanged(ARTrackablesChangedEventArgs<ARTrackedImage> eventargs)
