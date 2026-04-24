@@ -56,6 +56,8 @@ public class TrackImageScript : MonoBehaviour
             
             animator1.SetBool("Fight", true);
             animator2.SetBool("Fight", true);
+            Debug.Log(animator1.gameObject.name + " " + prefabCopy.name);
+            Debug.Log(animator2.gameObject.name + " " + prefabCopy2.name);
         }
 
         if (prefabCopy3 != null && prefabCopy4 != null && pelea2 == false)
@@ -68,6 +70,9 @@ public class TrackImageScript : MonoBehaviour
 
             animator3.SetBool("Fight", true);
             animator4.SetBool("Fight", true);
+
+            Debug.Log(animator3.gameObject.name + " " + prefabCopy3.name);
+            Debug.Log(animator4.gameObject.name + " " + prefabCopy4.name);
         }
 
         if (prefabCopy5 != null && prefabCopy6 != null && pelea3 == false)
@@ -80,6 +85,9 @@ public class TrackImageScript : MonoBehaviour
 
             animator5.SetBool("Fight", true);
             animator6.SetBool("Fight", true);
+
+            Debug.Log(animator5.gameObject.name + " " + prefabCopy5.name);
+            Debug.Log(animator6.gameObject.name + " " + prefabCopy6.name);
         }
     }
     IEnumerator Pelea()
