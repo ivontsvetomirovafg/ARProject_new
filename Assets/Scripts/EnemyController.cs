@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    public Transform player; // cam
     [SerializeField]
-    private Transform player; // cam
     private float speed;
+    [SerializeField]
     private float distDaño;
+    public GiroscopioController playerLife;
 
     void Update()
     {
@@ -18,9 +20,8 @@ public class EnemyController : MonoBehaviour
         if (distance < distDaño)
         {   
             Debug.Log("Te ha golpeado el enemigo jaja");
-            //TakeDamage();
+            playerLife.TakeDamage(1);
             Destroy(gameObject);
         }
-
     }
 }

@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 6502306965882241553}
   - component: {fileID: 6502306965882241554}
   - component: {fileID: 2808002834027476554}
+  - component: {fileID: -3056782836962329736}
   m_Layer: 0
   m_Name: CuteAlien
   m_TagString: Enemy
@@ -310,6 +311,21 @@ CapsuleCollider:
   m_Height: 5.2188826
   m_Direction: 1
   m_Center: {x: 0.07181859, y: 2.4531074, z: 0}
+--- !u!114 &-3056782836962329736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6502306965882241555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbfa5f1384fe7434386dfd3cf991b57c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
+  player: {fileID: 7475649837996178044, guid: 7ad08891a592a9048b42fe10a6c2b89c, type: 3}
+  speed: 2.5
+  "distDa\xF1o": 1
 --- !u!1 &6502306965956626339
 GameObject:
   m_ObjectHideFlags: 0

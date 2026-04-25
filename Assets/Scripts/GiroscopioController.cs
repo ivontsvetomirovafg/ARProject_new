@@ -47,7 +47,11 @@ public class GiroscopioController : MonoBehaviour
             float z = Random.Range(minimZ, maxZ);
 
             int marcianitoCogido = Random.Range (0, marcianito.Length);
-            Instantiate(marcianito[marcianitoCogido], new Vector3 (x, 0, z), Quaternion.identity);
+            GameObject enemigo = Instantiate(marcianito[marcianitoCogido], new Vector3 (x, 0, z), Quaternion.identity);
+            enemigo.GetComponent<EnemyController>().player = cam;
+
+            EnemyController enemyScript = enemigo.GetComponent<EnemyController>();
+            enemyScript.playerLife = GetComponent<GiroscopioController>();     
         }
     }
 

@@ -1888,21 +1888,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GiroscopioController
   cam: {fileID: 1664421172}
-  life: 0
-  gameOver: {fileID: 0}
+  life: 3
+  gameOver: {fileID: 1489494297}
   heart:
   - {fileID: 1785962619}
   - {fileID: 1512049418}
   - {fileID: 1557525393}
-  tiempoSpawn: 0
-  minimX: 0
-  minimZ: 0
-  maxX: 0
-  maxZ: 0
+  tiempoSpawn: 5
+  minimX: -30
+  minimZ: -30
+  maxX: 5
+  maxZ: 5
   marcianito:
-  - {fileID: 6502306965882241555, guid: f9c83489618abed4b8491e2f98e2eddb, type: 3}
-  - {fileID: 96880831397119726, guid: 3f4d68899125c444e9b47ed49dcb7336, type: 3}
-  - {fileID: 6644811607192194830, guid: b4c445fa10e207f459fd9413c07556a9, type: 3}
+  - {fileID: 4122119124978061350, guid: 5022bbb167922f64cb66e22217a4ba0c, type: 3}
+  - {fileID: 3463014984684644691, guid: 0091dbdf694837b4ab867a8d29648440, type: 3}
+  - {fileID: 4945674595383314192, guid: 28bc5c9ce18262e4fb1abc686c5a87dc, type: 3}
 --- !u!1 &2073364160
 GameObject:
   m_ObjectHideFlags: 0
