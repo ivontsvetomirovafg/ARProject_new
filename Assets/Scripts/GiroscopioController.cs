@@ -17,6 +17,9 @@ public class GiroscopioController : MonoBehaviour
     [SerializeField]
     private GameObject[] marcianito;
 
+    [SerializeField]
+    private AudioClip kill;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -62,8 +65,10 @@ public class GiroscopioController : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
+            AudioManager.instance.PlaySFX(kill, transform.position);
+
             if (hit.transform.CompareTag("Enemy"))
-            {
+            {               
                 Destroy(hit.transform.gameObject);
             }
         }

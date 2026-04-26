@@ -34,6 +34,13 @@ public class TrackImageScript : MonoBehaviour
     private Animator animator5;
     private Animator animator6;
 
+    [SerializeField]
+    private AudioClip fight1;
+    [SerializeField]
+    private AudioClip fight2;
+    [SerializeField]
+    private AudioClip fight3;
+
     private void OnEnable()
     {
         //trackedImagemanager.trackedImagesChanged += OnTrackedChanged; //Sirve para enlazar acciones. Herramienta para ponerlo todo en com�n (llamas a un solo evento).
@@ -92,6 +99,7 @@ public class TrackImageScript : MonoBehaviour
     }
     IEnumerator Pelea()
     {
+        AudioManager.instance.PlaySFX(fight1, transform.position);
         yield return new WaitForSeconds(15f);
         animator1.SetBool("Fight", false);
         animator2.SetBool("Fight", false);
@@ -101,6 +109,7 @@ public class TrackImageScript : MonoBehaviour
     }
     IEnumerator Pelea2()
     {
+        AudioManager.instance.PlaySFX(fight2, transform.position);
         yield return new WaitForSeconds(15f);
         animator3.SetBool("Fight", false);
         animator4.SetBool("Fight", false);
@@ -110,6 +119,7 @@ public class TrackImageScript : MonoBehaviour
     }
     IEnumerator Pelea3()
     {
+        AudioManager.instance.PlaySFX(fight3, transform.position);
         yield return new WaitForSeconds(15f);
         animator5.SetBool("Fight", false);
         animator6.SetBool("Fight", false);
