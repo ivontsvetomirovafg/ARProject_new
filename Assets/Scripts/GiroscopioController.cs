@@ -65,7 +65,8 @@ public class GiroscopioController : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            AudioManager.instance.PlaySFX(kill, transform.position);
+            //AudioManager.instance.PlaySFX(kill, transform.position);
+            Debug.Log("Disparas");
 
             if (hit.transform.CompareTag("Enemy"))
             {               
