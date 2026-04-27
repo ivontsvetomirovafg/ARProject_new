@@ -23,8 +23,8 @@ public class EnemyController : MonoBehaviour
         if (distance < distDaño)
         {   
             Debug.Log("Te ha golpeado el enemigo jaja");
-            
-            AudioManager.instance.PlaySFX(damage, transform.position);
+            playerLife.TakeDamage(1);
+            //AudioManager.instance.PlaySFX(damage, transform.position);
             Destroy(gameObject);
         }
     }

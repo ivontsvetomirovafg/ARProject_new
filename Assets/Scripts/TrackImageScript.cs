@@ -65,6 +65,7 @@ public class TrackImageScript : MonoBehaviour
             animator2.SetBool("Fight", true);
             Debug.Log(animator1.gameObject.name + " " + prefabCopy.name);
             Debug.Log(animator2.gameObject.name + " " + prefabCopy2.name);
+            AudioManager.instance.PlaySFX(fight1, transform.position);
         }
 
         if (prefabCopy3 != null && prefabCopy4 != null && pelea2 == false)
@@ -79,7 +80,8 @@ public class TrackImageScript : MonoBehaviour
             animator4.SetBool("Fight", true);
 
             Debug.Log(animator3.gameObject.name + " " + prefabCopy3.name);
-            Debug.Log(animator4.gameObject.name + " " + prefabCopy4.name);
+            Debug.Log(animator4.gameObject.name + " " + prefabCopy4.name);        
+            AudioManager.instance.PlaySFX(fight2, transform.position);
         }
 
         if (prefabCopy5 != null && prefabCopy6 != null && pelea3 == false)
@@ -95,12 +97,13 @@ public class TrackImageScript : MonoBehaviour
 
             Debug.Log(animator5.gameObject.name + " " + prefabCopy5.name);
             Debug.Log(animator6.gameObject.name + " " + prefabCopy6.name);
+            AudioManager.instance.PlaySFX(fight3, transform.position);
         }
     }
     IEnumerator Pelea()
-    {
-        AudioManager.instance.PlaySFX(fight1, transform.position);
+    {     
         yield return new WaitForSeconds(15f);
+        
         animator1.SetBool("Fight", false);
         animator2.SetBool("Fight", false);
 
@@ -109,7 +112,6 @@ public class TrackImageScript : MonoBehaviour
     }
     IEnumerator Pelea2()
     {
-        AudioManager.instance.PlaySFX(fight2, transform.position);
         yield return new WaitForSeconds(15f);
         animator3.SetBool("Fight", false);
         animator4.SetBool("Fight", false);
@@ -119,7 +121,6 @@ public class TrackImageScript : MonoBehaviour
     }
     IEnumerator Pelea3()
     {
-        AudioManager.instance.PlaySFX(fight3, transform.position);
         yield return new WaitForSeconds(15f);
         animator5.SetBool("Fight", false);
         animator6.SetBool("Fight", false);

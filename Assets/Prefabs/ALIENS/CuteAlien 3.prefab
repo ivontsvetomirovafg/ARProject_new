@@ -48,6 +48,8 @@ MonoBehaviour:
   player: {fileID: 7475649837996178044, guid: 7ad08891a592a9048b42fe10a6c2b89c, type: 3}
   speed: 4
   "distDa\xF1o": 2
+  playerLife: {fileID: 0}
+  damage: {fileID: 8300000, guid: d9cf884b2d160f942b13512cb835a30d, type: 3}
 --- !u!1001 &564869079399221905
 PrefabInstance:
   m_ObjectHideFlags: 0

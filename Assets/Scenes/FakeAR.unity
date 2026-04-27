@@ -750,7 +750,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8543980333379143755, guid: ae96b76dfb8834b40b9334ac7b9e61fe, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543980333379143755, guid: ae96b76dfb8834b40b9334ac7b9e61fe, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543980333379143755, guid: ae96b76dfb8834b40b9334ac7b9e61fe, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543980333379143755, guid: ae96b76dfb8834b40b9334ac7b9e61fe, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543980333379143755, guid: ae96b76dfb8834b40b9334ac7b9e61fe, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2061232817}
+    - target: {fileID: 8543980333379143755, guid: ae96b76dfb8834b40b9334ac7b9e61fe, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2061232817}
+    - target: {fileID: 8543980333379143755, guid: ae96b76dfb8834b40b9334ac7b9e61fe, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543980333379143755, guid: ae96b76dfb8834b40b9334ac7b9e61fe, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TouchScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543980333379143755, guid: ae96b76dfb8834b40b9334ac7b9e61fe, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Shoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543980333379143755, guid: ae96b76dfb8834b40b9334ac7b9e61fe, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GiroscopioController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543980333379143755, guid: ae96b76dfb8834b40b9334ac7b9e61fe, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GiroscopioController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543980333379143755, guid: ae96b76dfb8834b40b9334ac7b9e61fe, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543980333379143755, guid: ae96b76dfb8834b40b9334ac7b9e61fe, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6508780108717706124, guid: ae96b76dfb8834b40b9334ac7b9e61fe, type: 3}
@@ -893,6 +941,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1129135331}
   m_CullTransparentMesh: 1
+--- !u!1 &1162400989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1162400991}
+  - component: {fileID: 1162400990}
+  m_Layer: 0
+  m_Name: CamImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1162400990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162400989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19293ca4c7d129847a07545089553861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  backgroundTexture: {fileID: 1658873743}
+--- !u!4 &1162400991
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162400989}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.24646, y: 1.16814, z: -9.4399}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1286783895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1666,6 +1759,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f314f62ee903044d95e0977954ed2ee, type: 3}
+--- !u!114 &1658873743 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5865264033185530372, guid: 8f314f62ee903044d95e0977954ed2ee, type: 3}
+  m_PrefabInstance: {fileID: 1658873742}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
 --- !u!1 &1664421169
 GameObject:
   m_ObjectHideFlags: 0
@@ -2274,7 +2378,7 @@ MonoBehaviour:
   - {fileID: 4122119124978061350, guid: 5022bbb167922f64cb66e22217a4ba0c, type: 3}
   - {fileID: 3463014984684644691, guid: 0091dbdf694837b4ab867a8d29648440, type: 3}
   - {fileID: 4945674595383314192, guid: 28bc5c9ce18262e4fb1abc686c5a87dc, type: 3}
-  kill: {fileID: 0}
+  kill: {fileID: 8300000, guid: 71648d5ec8adca946af815cfbc844931, type: 3}
 --- !u!1 &2073364160
 GameObject:
   m_ObjectHideFlags: 0
@@ -2422,3 +2526,4 @@ SceneRoots:
   - {fileID: 1438806753}
   - {fileID: 1813010285}
   - {fileID: 120453637}
+  - {fileID: 1162400991}

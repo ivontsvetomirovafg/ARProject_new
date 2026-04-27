@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GiroscopioController : MonoBehaviour
 {
@@ -55,6 +56,14 @@ public class GiroscopioController : MonoBehaviour
 
             EnemyController enemyScript = enemigo.GetComponent<EnemyController>();
             enemyScript.playerLife = GetComponent<GiroscopioController>();     
+        }
+    }
+
+    public void TouchScreen(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+        {
+            Shoot();
         }
     }
 
