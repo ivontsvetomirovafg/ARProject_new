@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using System.Collections;
+using UnityEngine.UI;
 
 public class TrackImageScript : MonoBehaviour
 {
@@ -40,6 +41,8 @@ public class TrackImageScript : MonoBehaviour
     private AudioClip fight2;
     [SerializeField]
     private AudioClip fight3;
+
+    public Text texto;
 
     private void OnEnable()
     {
@@ -141,6 +144,7 @@ public class TrackImageScript : MonoBehaviour
                     {
                         prefabCopy = Instantiate(objetosAR[i].prefab, newImage.transform.position, newImage.transform.rotation);
                         animator1 = prefabCopy.GetComponent<Animator>();
+                        texto.text = prefabCopy.transform.localScale.ToString();
                     }
                     else if (prefabCopy2 == null)
                     {

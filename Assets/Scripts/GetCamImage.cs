@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Android;
 using UnityEngine.UI;
 
 public class NewMonoBehaviourScript : MonoBehaviour
@@ -10,6 +11,12 @@ public class NewMonoBehaviourScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
+        if (!Permission.HasUserAuthorizedPermission(Permission.Camera))
+        {
+            Permission.HasUserAuthorizedPermission(Permission.Camera);
+        }
+
         //primero: Revisar camaras de nuestro dispositivo
         WebCamDevice[] realCamaras = WebCamTexture.devices;
 
@@ -19,6 +26,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
             if (realCamaras[i].isFrontFacing == false)
             {
                 cam = new WebCamTexture(realCamaras[i].name, Screen.width, Screen.height);
+                break;
             }
         }
 

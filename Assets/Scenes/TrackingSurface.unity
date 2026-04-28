@@ -3054,9 +3054,9 @@ MonoBehaviour:
   - {fileID: 658319374979304608, guid: 22516d4728a02c443ad2e178c5d176d4, type: 3}
   - {fileID: 7657371019280970715, guid: 9e09be13bef0cf3429e05781fe2a110e, type: 3}
   - {fileID: 980474560908009946, guid: 83042aee8d624f3438bf291aea201a87, type: 3}
-  - {fileID: 8634669809948801292, guid: 7c0aec92f2332204e9e053bc11b31671, type: 3}
+  - {fileID: 6972830275645212415, guid: 89018e6d5b3837d4ab0b229f37424953, type: 3}
   canvasUI: {fileID: 555217743}
-  cat: {fileID: 0}
+  cat: {fileID: 8300000, guid: 4c55021b7a02ea04bb0722deddc3acc9, type: 3}
 --- !u!4 &1840813198
 Transform:
   m_ObjectHideFlags: 0
@@ -3258,7 +3258,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -28.5, y: 12.4}
+  m_AnchoredPosition: {x: -28.5, y: 12.400024}
   m_SizeDelta: {x: 150.35, y: 48.1}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &2104998921

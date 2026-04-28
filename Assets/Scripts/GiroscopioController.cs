@@ -69,6 +69,7 @@ public class GiroscopioController : MonoBehaviour
 
     public void Shoot()
     {
+        Debug.Log("Entra en Shoot");
         Ray ray = Camera.main.ViewportPointToRay(new Vector2(0.5f, 0.5f));
         RaycastHit hit;
 
@@ -77,8 +78,9 @@ public class GiroscopioController : MonoBehaviour
             //AudioManager.instance.PlaySFX(kill, transform.position);
             Debug.Log("Disparas");
 
-            if (hit.transform.CompareTag("Enemy"))
-            {               
+            if (hit.transform.gameObject.CompareTag("Enemy"))
+            {
+                Debug.Log("EnemyMuerto");
                 Destroy(hit.transform.gameObject);
             }
         }
