@@ -16,7 +16,7 @@ public class ARSurfacemanager : MonoBehaviour
     private int selectedIndex; 
 
     [SerializeField]
-    private AudioClip cat;
+    private AudioClip[] cats;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -44,7 +44,7 @@ public class ARSurfacemanager : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 Debug.Log("Choco contra " + hit.transform.name);
-                AudioManager.instance.PlaySFX(cat, transform.position);
+                AudioManager.instance.PlaySFX(cats[selectedIndex], transform.position);
                 Instantiate(prefabs[selectedIndex], hit.point, Quaternion.identity);
             }
         }

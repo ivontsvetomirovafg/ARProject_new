@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     private GameObject SFXPrefab;
     private float musicVolume;
-    private float sfxVolume; 
+    private float sfxVolume = 1; 
 
 
     private void Awake()

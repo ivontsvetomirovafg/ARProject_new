@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Input Manager
+        //Input Manager --> Lo he llamado directamente en el propio GiroscopioController.
         if (Input.touchCount>0)
         {
             Touch touch = Input.GetTouch(0);

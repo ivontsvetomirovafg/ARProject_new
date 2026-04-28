@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class GiroscopioController : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class GiroscopioController : MonoBehaviour
     private float minimX, minimZ, maxX, maxZ;
     [SerializeField]
     private GameObject[] marcianito;
+    private bool canShoot = true;
 
     [SerializeField]
     private AudioClip kill;
@@ -69,21 +71,33 @@ public class GiroscopioController : MonoBehaviour
 
     public void Shoot()
     {
+        if (canShoot == false)
+        {
+            return;
+        }
+
         Debug.Log("Entra en Shoot");
+        canShoot = false;
         Ray ray = Camera.main.ViewportPointToRay(new Vector2(0.5f, 0.5f));
         RaycastHit hit;
 
+        AudioManager.instance.PlaySFX(kill, transform.position);
+
         if (Physics.Raycast(ray, out hit))
         {
-            //AudioManager.instance.PlaySFX(kill, transform.position);
-            Debug.Log("Disparas");
-
             if (hit.transform.gameObject.CompareTag("Enemy"))
             {
                 Debug.Log("EnemyMuerto");
                 Destroy(hit.transform.gameObject);
             }
         }
+        StartCoroutine(ShootAgain());
+    }
+
+    IEnumerator ShootAgain()
+    {
+        yield return new WaitForSeconds(0.5f);
+        canShoot = true;
     }
 
     public void TakeDamage(int damage)

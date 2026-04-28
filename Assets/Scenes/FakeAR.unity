@@ -233,6 +233,7 @@ GameObject:
   - component: {fileID: 429518922}
   - component: {fileID: 429518924}
   - component: {fileID: 429518923}
+  - component: {fileID: 429518925}
   m_Layer: 5
   m_Name: Pause
   m_TagString: Untagged
@@ -259,8 +260,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 16.03003, y: 0}
-  m_SizeDelta: {x: -542.10016, y: 0}
+  m_AnchoredPosition: {x: 16.350098, y: 0}
+  m_SizeDelta: {x: -1093.2999, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &429518923
 MonoBehaviour:
@@ -300,6 +301,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429518921}
   m_CullTransparentMesh: 1
+--- !u!114 &429518925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429518921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 9.22, y: 8.61}
+  m_UseGraphicAlpha: 1
 --- !u!1 &627367912 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2681624097373102229, guid: de61416e7cff1db4eaf0efe0e510b355, type: 3}
@@ -477,7 +493,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.6, y: -240}
+  m_AnchoredPosition: {x: -5.6, y: -267}
   m_SizeDelta: {x: 438.8, y: 148.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &740839910
@@ -1274,7 +1290,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.6, y: -24}
+  m_AnchoredPosition: {x: -5.6, y: -32}
   m_SizeDelta: {x: 438.8, y: 148.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1448335978
@@ -2003,11 +2019,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1413170784}
-  - {fileID: 429518922}
-  - {fileID: 1489494298}
   - {fileID: 1785962620}
   - {fileID: 1512049419}
   - {fileID: 1557525394}
+  - {fileID: 429518922}
+  - {fileID: 1489494298}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2118,9 +2134,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: b90a115845a8f2847a364a0a322772e8, type: 3}
+  m_Resource: {fileID: 8300000, guid: 6511c93f40a36b444ba646efd3a9d265, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.303
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2510,7 +2526,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.6, y: 190.1}
+  m_AnchoredPosition: {x: -5.6, y: 212}
   m_SizeDelta: {x: 438.8, y: 148.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2073364162
@@ -2612,14 +2628,14 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1664421172}
+  - {fileID: 1162400991}
+  - {fileID: 1658873742}
   - {fileID: 645987280}
   - {fileID: 1996386780}
   - {fileID: 628569369}
-  - {fileID: 1658873742}
   - {fileID: 1699561896}
+  - {fileID: 120453637}
   - {fileID: 1575156959}
   - {fileID: 1119627177}
   - {fileID: 1438806753}
   - {fileID: 1813010285}
-  - {fileID: 120453637}
-  - {fileID: 1162400991}
