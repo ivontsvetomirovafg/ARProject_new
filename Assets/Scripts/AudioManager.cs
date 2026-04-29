@@ -55,15 +55,27 @@ public class AudioManager : MonoBehaviour
         SFXClone.GetComponent <AudioSource>().Play(); 
         Destroy(SFXClone, _sfx.length);
     }
-    public void SetMusicVolume(float _volume)
+    public void FadeOutMusic(float duration)
     {
-        musicVolume = _volume;
-        musicSource.volume = _volume;
+        StartCoroutine(FadeOutCoroutine(duration));
     }
 
-    public void SetSFXVolume(float _volume)
+    private IEnumerator FadeOutCoroutine(float _duration)
     {
-        sfxVolume = _volume;
-        ambientSource.volume = _volume;
+        float startVolume = musicSource.volume;
+
+        while (musicSource.volume > 0)
+        {
+            musicSource.volume -= startVolume * Time.deltaTime / _duration;
+            yield return null;
+        }
+
+        musicSource.Stop();
+        musicSource.volume = startVolume;
+    }
+    public void SetMusicVolume(float _volume)
+    {
+        musicSource.volume = _volume;
     }
 }
+
