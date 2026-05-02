@@ -24,7 +24,7 @@ public class EnemyController : MonoBehaviour
         {   
             Debug.Log("Te ha golpeado el enemigo jaja");
             playerLife.TakeDamage(1);
-            //AudioManager.instance.PlaySFX(damage, transform.position);
+            AudioManager.instance.PlaySFX(damage, transform.position);
             Destroy(gameObject);
         }
     }

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GiroscopioController : MonoBehaviour
 {
@@ -18,10 +19,17 @@ public class GiroscopioController : MonoBehaviour
     private float minimX, minimZ, maxX, maxZ;
     [SerializeField]
     private GameObject[] marcianito;
+
     private bool canShoot = true;
+    private bool isDead = false;
 
     [SerializeField]
     private AudioClip kill;
+
+    [SerializeField]
+    private int killCount;
+    [SerializeField]
+    private Text killText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -45,6 +53,11 @@ public class GiroscopioController : MonoBehaviour
     }
     private void Update()
     {
+        if (isDead == true) 
+        {
+            return;
+        }
+        
         timePass += Time.deltaTime;
         if (timePass >= tiempoSpawn)
         {
@@ -71,6 +84,11 @@ public class GiroscopioController : MonoBehaviour
 
     public void Shoot()
     {
+        if (isDead == true) 
+        {
+            return;
+        }
+
         if (canShoot == false)
         {
             return;
@@ -89,6 +107,9 @@ public class GiroscopioController : MonoBehaviour
             {
                 Debug.Log("EnemyMuerto");
                 Destroy(hit.transform.gameObject);
+                
+                killCount++;
+                killText.text = "x" + killCount;
             }
         }
         StartCoroutine(ShootAgain());
@@ -107,6 +128,7 @@ public class GiroscopioController : MonoBehaviour
 
         if (life <= 0)
         {
+            isDead = true;
             gameOver.SetActive(true);
         }
     }
