@@ -36,8 +36,8 @@ public class LevelManager : MonoBehaviour
     }
 
     public void GameOver()
-    {
-        AudioManager.instance.FadeOutMusic(1.5f);
+    {                
+        AudioManager.instance.StopMusic();
         AudioManager.instance.PlaySFX(gameOver, transform.position);
         panelGameOver.SetActive(true);
     }
