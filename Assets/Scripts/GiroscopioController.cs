@@ -105,8 +105,7 @@ public class GiroscopioController : MonoBehaviour
             if (hit.transform.gameObject.CompareTag("Enemy"))
             {
                 Debug.Log("EnemyMuerto");
-                Destroy(hit.transform.gameObject);
-                //destruir objeto por completo, capsule collider
+                Destroy(hit.transform.root.gameObject); //para eliminar el padre xd
                 
                 killCount++;
                 killText.text = "x" + killCount;

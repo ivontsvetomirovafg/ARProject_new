@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
     private AudioSource ambientSource;
     [SerializeField]
     private GameObject SFXPrefab;
-    private float musicVolume;
+    private float musicVolume = 0.4f;
     private float sfxVolume = 1; 
 
 
