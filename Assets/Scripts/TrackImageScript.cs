@@ -144,10 +144,6 @@ public class TrackImageScript : MonoBehaviour
                     {
                         prefabCopy = Instantiate(objetosAR[i].prefab, newImage.transform.position, newImage.transform.rotation);
 
-                        //prefabCopy = Instantiate(objetosAR[i].prefab, newImage.transform);
-                        //prefabCopy.transform.localPosition = Vector3.zero;
-                        //prefabCopy.transform.localRotation = Quaternion.identity;
-
                         animator1 = prefabCopy.GetComponent<Animator>();
                         texto.text = prefabCopy.transform.localScale.ToString();
                     }
@@ -178,7 +174,6 @@ public class TrackImageScript : MonoBehaviour
                     }
                 }
             }
-            
         }
 
         foreach (var newImage in eventargs.removed) //por si la imagen no se trackea

@@ -11,6 +11,8 @@ public class LevelManager : MonoBehaviour
     private GameObject panelPause;
     [SerializeField]
     private AudioClip gameOver;
+    [SerializeField]
+    private AudioClip musica;
 
     private void Awake()
     {
@@ -19,7 +21,7 @@ public class LevelManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-      
+        AudioManager.instance.PlayMusic(musica);
     }
 
     // Update is called once per frame
@@ -33,6 +35,7 @@ public class LevelManager : MonoBehaviour
     public void MainMenuButton()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1;
     }
 
     public void GameOver()

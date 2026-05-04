@@ -94,7 +94,6 @@ public class GiroscopioController : MonoBehaviour
             return;
         }
 
-        Debug.Log("Entra en Shoot");
         canShoot = false;
         Ray ray = Camera.main.ViewportPointToRay(new Vector2(0.5f, 0.5f));
         RaycastHit hit;
@@ -107,6 +106,7 @@ public class GiroscopioController : MonoBehaviour
             {
                 Debug.Log("EnemyMuerto");
                 Destroy(hit.transform.gameObject);
+                //destruir objeto por completo, capsule collider
                 
                 killCount++;
                 killText.text = "x" + killCount;
