@@ -21,7 +21,7 @@ public class GiroscopioController : MonoBehaviour
     private GameObject[] marcianito;
 
     private bool canShoot = true;
-    private bool isDead = false;
+    public bool isDead = false;
 
     [SerializeField]
     private AudioClip kill;
@@ -30,6 +30,9 @@ public class GiroscopioController : MonoBehaviour
     private int killCount;
     [SerializeField]
     private Text killText;
+
+    [SerializeField]
+    private AudioClip gameOverSFX;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -108,10 +111,26 @@ public class GiroscopioController : MonoBehaviour
                 Destroy(hit.transform.root.gameObject); //para eliminar el padre xd
                 
                 killCount++;
-                killText.text = "x" + killCount;
+                killText.text = "x" + killCount;  
+                              
+                EnemyController enemy = hit.transform.GetComponentInParent<EnemyController>();
+                if (enemy.marcianitoVida == true)
+                {
+                    Vida(1); 
+                }
             }
         }
         StartCoroutine(ShootAgain());
+    }
+    public void Vida(int _vida)
+    {
+        if (life >= 4) 
+        {
+            return;
+        }
+
+        heart[life].SetActive(true);
+        life++;
     }
 
     IEnumerator ShootAgain()
@@ -127,6 +146,7 @@ public class GiroscopioController : MonoBehaviour
 
         if (life <= 0)
         {
+            AudioManager.instance.PlaySFX(gameOverSFX, transform.position);
             isDead = true;
             gameOver.SetActive(true);
         }

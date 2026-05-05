@@ -28,8 +28,13 @@ public class AudioManager : MonoBehaviour
     }
     public void PlayMusic(AudioClip _music)
     {
+        if (musicSource.isPlaying) 
+        {
+            return; 
+        }
         musicSource.clip = _music;
         musicSource.volume = musicVolume;
+        musicSource.loop = true;
         musicSource.Play();
     }
     public void StopMusic()

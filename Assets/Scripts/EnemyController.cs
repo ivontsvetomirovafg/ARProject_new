@@ -8,12 +8,18 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private float distDaño;
     public GiroscopioController playerLife;
+    public bool marcianitoVida;
 
     [SerializeField]
     private AudioClip damage;
 
     void Update()
     {
+        if (playerLife.isDead == true)
+        {
+            return;
+        }
+
         transform.LookAt(player);
         Vector3 direction = (player.position - transform.position).normalized;
         transform.position += direction * speed * Time.deltaTime;

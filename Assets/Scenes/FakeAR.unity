@@ -365,7 +365,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
   panelGameOver: {fileID: 1489494297}
   panelPause: {fileID: 429518921}
-  gameOver: {fileID: 8300000, guid: b90a115845a8f2847a364a0a322772e8, type: 3}
   musica: {fileID: 8300000, guid: 6511c93f40a36b444ba646efd3a9d265, type: 3}
 --- !u!4 &628569369
 Transform:
@@ -382,6 +381,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &643791928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 643791929}
+  - component: {fileID: 643791931}
+  - component: {fileID: 643791930}
+  m_Layer: 5
+  m_Name: LIFEEXTRA
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &643791929
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643791928}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1699561896}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -150, y: -441}
+  m_SizeDelta: {x: 262.7, y: 266.3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &643791930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643791928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: eec00c496e6aa42719ba210ce9d1c928, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &643791931
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643791928}
+  m_CullTransparentMesh: 1
 --- !u!1 &645987277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1669,6 +1743,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
+    - target: {fileID: 2681624097373102229, guid: de61416e7cff1db4eaf0efe0e510b355, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8778310604295458011, guid: de61416e7cff1db4eaf0efe0e510b355, type: 3}
     m_RemovedGameObjects: []
@@ -2025,6 +2103,7 @@ RectTransform:
   - {fileID: 1785962620}
   - {fileID: 1512049419}
   - {fileID: 1557525394}
+  - {fileID: 643791929}
   - {fileID: 429518922}
   - {fileID: 1489494298}
   m_Father: {fileID: 0}
@@ -2430,6 +2509,7 @@ MonoBehaviour:
   - {fileID: 1785962619}
   - {fileID: 1512049418}
   - {fileID: 1557525393}
+  - {fileID: 643791928}
   tiempoSpawn: 8
   minimX: -60
   minimZ: -60
@@ -2439,9 +2519,11 @@ MonoBehaviour:
   - {fileID: 4122119124978061350, guid: 5022bbb167922f64cb66e22217a4ba0c, type: 3}
   - {fileID: 3463014984684644691, guid: 0091dbdf694837b4ab867a8d29648440, type: 3}
   - {fileID: 4945674595383314192, guid: 28bc5c9ce18262e4fb1abc686c5a87dc, type: 3}
+  isDead: 0
   kill: {fileID: 8300000, guid: 71648d5ec8adca946af815cfbc844931, type: 3}
   killCount: 0
   killText: {fileID: 1865988028}
+  gameOverSFX: {fileID: 8300000, guid: b90a115845a8f2847a364a0a322772e8, type: 3}
 --- !u!1 &2073364160
 GameObject:
   m_ObjectHideFlags: 0

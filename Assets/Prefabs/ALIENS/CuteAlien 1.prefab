@@ -49,6 +49,7 @@ MonoBehaviour:
   speed: 5
   "distDa\xF1o": 2
   playerLife: {fileID: 0}
+  marcianitoVida: 0
   damage: {fileID: 8300000, guid: d9cf884b2d160f942b13512cb835a30d, type: 3}
 --- !u!1001 &2442255784648196163
 PrefabInstance:

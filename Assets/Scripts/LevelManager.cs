@@ -10,8 +10,6 @@ public class LevelManager : MonoBehaviour
     [SerializeField] 
     private GameObject panelPause;
     [SerializeField]
-    private AudioClip gameOver;
-    [SerializeField]
     private AudioClip musica;
 
     private void Awake()
@@ -34,6 +32,7 @@ public class LevelManager : MonoBehaviour
     }
     public void MainMenuButton()
     {
+        AudioManager.instance.StopMusic();
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
     }
@@ -41,9 +40,9 @@ public class LevelManager : MonoBehaviour
     public void GameOver()
     {                
         AudioManager.instance.StopMusic();
-        AudioManager.instance.PlaySFX(gameOver, transform.position);
         panelGameOver.SetActive(true);
     }
+    
     public void Pause()
     {
         if (panelPause.activeInHierarchy == false)
