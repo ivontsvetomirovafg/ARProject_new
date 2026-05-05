@@ -529,9 +529,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 278384318}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: Exit
+        m_MethodName: MainMenuButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -603,7 +603,7 @@ MonoBehaviour:
   - referenceImageName: robloxNoob
     prefab: {fileID: 6200621778274356589, guid: 9ff8082df9cd4414dbfafff6d3e2a789, type: 3}
   - referenceImageName: shrek
-    prefab: {fileID: 75969806203867143, guid: e978e2e030c79814eaef4383b606f9cd, type: 3}
+    prefab: {fileID: 678280768449942383, guid: 0a5c2ae653629e641bff2786c1c5369e, type: 3}
   - referenceImageName: rick
     prefab: {fileID: 278725779550862662, guid: 3bc3263cfad7a0a4d93d5469724dfa37, type: 3}
   - referenceImageName: spiderMan
@@ -925,7 +925,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 278384318}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: Pause
         m_Mode: 1
@@ -1318,7 +1318,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 278384318}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: Reiniciar
         m_Mode: 1
