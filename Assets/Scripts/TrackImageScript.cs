@@ -44,6 +44,13 @@ public class TrackImageScript : MonoBehaviour
 
     public Text texto;
 
+    [Header ("Particulas")]
+    [SerializeField] 
+    private GameObject particulaPrefab;
+    private GameObject p1, p2;
+    private GameObject p3, p4;
+    private GameObject p5, p6;
+
     private void OnEnable()
     {
         //trackedImagemanager.trackedImagesChanged += OnTrackedChanged; //Sirve para enlazar acciones. Herramienta para ponerlo todo en com�n (llamas a un solo evento).
@@ -66,6 +73,10 @@ public class TrackImageScript : MonoBehaviour
             
             animator1.SetBool("Fight", true);
             animator2.SetBool("Fight", true);
+
+            p1 = Instantiate(particulaPrefab, prefabCopy.transform);
+            p2 = Instantiate(particulaPrefab, prefabCopy2.transform);
+
             Debug.Log(animator1.gameObject.name + " " + prefabCopy.name);
             Debug.Log(animator2.gameObject.name + " " + prefabCopy2.name);
             AudioManager.instance.PlaySFX(fight1, transform.position);
@@ -81,6 +92,9 @@ public class TrackImageScript : MonoBehaviour
 
             animator3.SetBool("Fight", true);
             animator4.SetBool("Fight", true);
+
+            p3 = Instantiate(particulaPrefab, prefabCopy3.transform);
+            p4 = Instantiate(particulaPrefab, prefabCopy4.transform);
 
             Debug.Log(animator3.gameObject.name + " " + prefabCopy3.name);
             Debug.Log(animator4.gameObject.name + " " + prefabCopy4.name);        
@@ -98,6 +112,9 @@ public class TrackImageScript : MonoBehaviour
             animator5.SetBool("Fight", true);
             animator6.SetBool("Fight", true);
 
+            p5 = Instantiate(particulaPrefab, prefabCopy5.transform);
+            p6 = Instantiate(particulaPrefab, prefabCopy6.transform);
+
             Debug.Log(animator5.gameObject.name + " " + prefabCopy5.name);
             Debug.Log(animator6.gameObject.name + " " + prefabCopy6.name);
             AudioManager.instance.PlaySFX(fight3, transform.position);
@@ -112,6 +129,9 @@ public class TrackImageScript : MonoBehaviour
 
         animator2.SetTrigger("Win");
         animator1.SetTrigger("Die");
+
+        Destroy(p1);
+        Destroy(p2);
     }
     IEnumerator Pelea2()
     {
@@ -121,6 +141,9 @@ public class TrackImageScript : MonoBehaviour
 
         animator4.SetTrigger("Win");
         animator3.SetTrigger("Die");
+
+        Destroy(p3);
+        Destroy(p4);
     }
     IEnumerator Pelea3()
     {
@@ -130,6 +153,9 @@ public class TrackImageScript : MonoBehaviour
 
         animator5.SetTrigger("Win");
         animator6.SetTrigger("Die");
+
+        Destroy(p5);
+        Destroy(p6);
     }
 
     void OnTrackedChanged(ARTrackablesChangedEventArgs<ARTrackedImage> eventargs)

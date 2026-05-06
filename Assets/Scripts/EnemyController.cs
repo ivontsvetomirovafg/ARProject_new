@@ -10,6 +10,12 @@ public class EnemyController : MonoBehaviour
     public GiroscopioController playerLife;
     public bool marcianitoVida;
 
+    [Header("Particulas")]
+    [SerializeField] 
+    private GameObject particulas;
+    [SerializeField] 
+    private GameObject particulasDaño;
+
     [SerializeField]
     private AudioClip damage;
 
@@ -29,9 +35,20 @@ public class EnemyController : MonoBehaviour
         if (distance < distDaño)
         {   
             Debug.Log("Te ha golpeado el enemigo jaja");
-            playerLife.TakeDamage(1);
+            playerLife.TakeDamage(1);  
+            
+            GameObject particulasDañ = Instantiate(particulasDaño, transform.position, Quaternion.identity);
+            Destroy(particulasDañ, 1f);
             AudioManager.instance.PlaySFX(damage, transform.position);
+
             Destroy(gameObject);
+        }
+    }
+    void Start()
+    {
+        if (marcianitoVida == true)
+        {
+            Instantiate(particulas, transform.position, Quaternion.identity, transform);
         }
     }
 }

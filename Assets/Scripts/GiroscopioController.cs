@@ -33,6 +33,8 @@ public class GiroscopioController : MonoBehaviour
 
     [SerializeField]
     private AudioClip gameOverSFX;
+    [SerializeField] 
+    private GameObject particulasDisparo;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -107,9 +109,11 @@ public class GiroscopioController : MonoBehaviour
         {
             if (hit.transform.gameObject.CompareTag("Enemy"))
             {
-                Debug.Log("EnemyMuerto");
-                Destroy(hit.transform.root.gameObject); //para eliminar el padre xd
+                Debug.Log("EnemyMuerto");          
+                GameObject particulasDisp = Instantiate(particulasDisparo, hit.point, Quaternion.identity);
+                Destroy(particulasDisp, 2f);
                 
+                Destroy(hit.transform.root.gameObject); //para eliminar el padre xd
                 killCount++;
                 killText.text = "x" + killCount;  
                               

@@ -50,7 +50,8 @@ MonoBehaviour:
   "distDa\xF1o": 2
   playerLife: {fileID: 0}
   marcianitoVida: 0
-  marcianitoGira: 1
+  particulas: {fileID: 0}
+  "particulasDa\xF1o": {fileID: 2708598583397607911, guid: 6398d43fe79ea0140913dc5530c646af, type: 3}
   damage: {fileID: 8300000, guid: d9cf884b2d160f942b13512cb835a30d, type: 3}
 --- !u!1001 &8930406294262724109
 PrefabInstance:

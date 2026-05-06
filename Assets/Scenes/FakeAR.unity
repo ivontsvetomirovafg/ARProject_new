@@ -2524,6 +2524,7 @@ MonoBehaviour:
   killCount: 0
   killText: {fileID: 1865988028}
   gameOverSFX: {fileID: 8300000, guid: b90a115845a8f2847a364a0a322772e8, type: 3}
+  particulasDisparo: {fileID: 8791802859087666345, guid: ae07f2a45f14a82428409cfe410e6002, type: 3}
 --- !u!1 &2073364160
 GameObject:
   m_ObjectHideFlags: 0
