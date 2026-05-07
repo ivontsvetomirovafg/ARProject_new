@@ -25,22 +25,22 @@ public class GameController : MonoBehaviour
             }
 
             /*
-            if (touch.phase ==TouchPhase.Moved) //Detecta si el dedo está en una pos distinta del frame anterior.
+            if (touch.phase ==TouchPhase.Moved) //Detecta si el dedo estï¿½ en una pos distinta del frame anterior.
             {
 
             }
 
-            if (touch.phase == TouchPhase.Stationary) //Mira si el dedo está en la misma pos que el frame anterior.
+            if (touch.phase == TouchPhase.Stationary) //Mira si el dedo estï¿½ en la misma pos que el frame anterior.
             {
 
             }
 
-            if (touch.phase == TouchPhase.Ended) //El frame después de que el dedo haya dejado de tocar la pantalla.
+            if (touch.phase == TouchPhase.Ended) //El frame despuï¿½s de que el dedo haya dejado de tocar la pantalla.
             {
 
             }
 
-            if (touch.phase == TouchPhase.Canceled) // El frame después de que el dedo haya dejado de tocar la pantalla.
+            if (touch.phase == TouchPhase.Canceled) // El frame despuï¿½s de que el dedo haya dejado de tocar la pantalla.
             {
 
             }
@@ -52,7 +52,7 @@ public class GameController : MonoBehaviour
         //Input System
     }
 
-    public void TouchScreen(InputAction.CallbackContext context)
+    public void TouchScreen(InputAction.CallbackContext context) //Lo he puesto en el giroscopioController 
     {
         if (context.phase == InputActionPhase.Started)
         {

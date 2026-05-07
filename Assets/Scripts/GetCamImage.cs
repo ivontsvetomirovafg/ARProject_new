@@ -11,13 +11,12 @@ public class NewMonoBehaviourScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
         if (!Permission.HasUserAuthorizedPermission(Permission.Camera))
         {
             Permission.HasUserAuthorizedPermission(Permission.Camera);
         }
 
-        //primero: Revisar camaras de nuestro dispositivo
+        //Esto para revisar las cam de nuestro dispositivo
         WebCamDevice[] realCamaras = WebCamTexture.devices;
 
         for(int i = 0; i < realCamaras.Length; i++)
