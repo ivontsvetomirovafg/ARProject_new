@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public Transform player; // cam
+    public Transform player; 
     [SerializeField]
     private float speed;
     [SerializeField]

@@ -52,7 +52,7 @@ public class GameController : MonoBehaviour
         //Input System
     }
 
-    public void TouchScreen(InputAction.CallbackContext context) //Lo he puesto en el giroscopioController 
+    public void TouchScreen(InputAction.CallbackContext context) //Lo he puesto en el giroscopioController porque solo necesito disparar desde el centro de la pantalla. 
     {
         if (context.phase == InputActionPhase.Started)
         {

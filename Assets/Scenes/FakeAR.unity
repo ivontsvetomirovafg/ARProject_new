@@ -2725,7 +2725,7 @@ MonoBehaviour:
   - {fileID: 4122119124978061350, guid: 5022bbb167922f64cb66e22217a4ba0c, type: 3}
   - {fileID: 3463014984684644691, guid: 0091dbdf694837b4ab867a8d29648440, type: 3}
   - {fileID: 4945674595383314192, guid: 28bc5c9ce18262e4fb1abc686c5a87dc, type: 3}
-  tiempoSpawn: 8
+  tiempoSpawn: 6
   minimX: -60
   minimZ: -60
   maxX: -40

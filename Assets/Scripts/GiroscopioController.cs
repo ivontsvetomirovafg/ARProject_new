@@ -118,6 +118,7 @@ public class GiroscopioController : MonoBehaviour
                 Destroy(hit.transform.root.gameObject); //para eliminar el padre xd
                 killCount++;
                 killText.text = "x" + killCount;  
+                Win();
                               
                 EnemyController enemy = hit.transform.GetComponentInParent<EnemyController>();
                 if (enemy.marcianitoVida == true)
@@ -161,7 +162,7 @@ public class GiroscopioController : MonoBehaviour
 
     public void Win()
     {
-        if (killCount == 20)
+        if (killCount >= 15)
         {
             isDead = true;
             winPanel.SetActive(true);
