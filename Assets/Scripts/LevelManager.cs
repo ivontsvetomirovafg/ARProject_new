@@ -36,12 +36,6 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
     }
-
-    public void GameOver()
-    {                
-        AudioManager.instance.StopMusic();
-        panelGameOver.SetActive(true);
-    }
     
     public void Pause()
     {

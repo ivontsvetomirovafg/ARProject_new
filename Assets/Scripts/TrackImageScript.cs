@@ -42,8 +42,6 @@ public class TrackImageScript : MonoBehaviour
     [SerializeField]
     private AudioClip fight3;
 
-    public Text texto;
-
     [Header ("Particulas")]
     [SerializeField] 
     private GameObject particulaPrefab;
@@ -77,8 +75,6 @@ public class TrackImageScript : MonoBehaviour
             p1 = Instantiate(particulaPrefab, prefabCopy.transform);
             p2 = Instantiate(particulaPrefab, prefabCopy2.transform);
 
-            Debug.Log(animator1.gameObject.name + " " + prefabCopy.name);
-            Debug.Log(animator2.gameObject.name + " " + prefabCopy2.name);
             AudioManager.instance.PlaySFX(fight1, transform.position);
         }
 
@@ -95,9 +91,7 @@ public class TrackImageScript : MonoBehaviour
 
             p3 = Instantiate(particulaPrefab, prefabCopy3.transform);
             p4 = Instantiate(particulaPrefab, prefabCopy4.transform);
-
-            Debug.Log(animator3.gameObject.name + " " + prefabCopy3.name);
-            Debug.Log(animator4.gameObject.name + " " + prefabCopy4.name);        
+      
             AudioManager.instance.PlaySFX(fight2, transform.position);
         }
 
@@ -115,8 +109,6 @@ public class TrackImageScript : MonoBehaviour
             p5 = Instantiate(particulaPrefab, prefabCopy5.transform);
             p6 = Instantiate(particulaPrefab, prefabCopy6.transform);
 
-            Debug.Log(animator5.gameObject.name + " " + prefabCopy5.name);
-            Debug.Log(animator6.gameObject.name + " " + prefabCopy6.name);
             AudioManager.instance.PlaySFX(fight3, transform.position);
         }
     }
@@ -171,7 +163,6 @@ public class TrackImageScript : MonoBehaviour
                         prefabCopy = Instantiate(objetosAR[i].prefab, newImage.transform.position, newImage.transform.rotation);
 
                         animator1 = prefabCopy.GetComponent<Animator>();
-                        texto.text = prefabCopy.transform.localScale.ToString();
                     }
                     else if (prefabCopy2 == null)
                     {
@@ -211,7 +202,7 @@ public class TrackImageScript : MonoBehaviour
             }*/
         }
 
-        foreach (var newImage in eventargs.updated)
+        /*foreach (var newImage in eventargs.updated)
         {
             //Esto es cada frame que sigue detectando
             
@@ -222,7 +213,7 @@ public class TrackImageScript : MonoBehaviour
                     prefabCopy = Instantiate(objetosAR[i].prefab, newImage.transform.position, newImage.transform.rotation);
                 }
             }
-        }
+        }*/
     }
 }
 

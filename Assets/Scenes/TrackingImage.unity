@@ -610,9 +610,8 @@ MonoBehaviour:
   - referenceImageName: subZero
     prefab: {fileID: 6780546038460685412, guid: 93b34c25cb0d076449f7b6359943ce46, type: 3}
   fight1: {fileID: 8300000, guid: d93522f68fec8a345b75bd8ce9daf67f, type: 3}
-  fight2: {fileID: 8300000, guid: 71fa828232c914a40b4d256a9e2cb45b, type: 3}
-  fight3: {fileID: 8300000, guid: 4e116767ca0b10f4abbec5a04065ff05, type: 3}
-  texto: {fileID: 1194100184}
+  fight2: {fileID: 8300000, guid: 455473a1d092a754c8628e08c0d7d929, type: 3}
+  fight3: {fileID: 8300000, guid: 7ff31b00360677846875df9d4651f0dd, type: 3}
   particulaPrefab: {fileID: 3280519133390621005, guid: a71be3e7990efb040a07565c43cbb198, type: 3}
 --- !u!1 &1075000274
 GameObject:
@@ -1175,7 +1174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3533482092141526111, guid: da7973b53d795634c9e90ae76900f405, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.58903
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3533482092141526111, guid: da7973b53d795634c9e90ae76900f405, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1183,7 +1182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3533482092141526111, guid: da7973b53d795634c9e90ae76900f405, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.58903
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3533482092141526111, guid: da7973b53d795634c9e90ae76900f405, type: 3}
       propertyPath: m_LocalRotation.w

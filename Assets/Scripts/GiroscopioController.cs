@@ -8,31 +8,33 @@ public class GiroscopioController : MonoBehaviour
     [SerializeField]
     private Transform cam;
     public int life;
+
     [SerializeField]
     public GameObject gameOver;
     [SerializeField]
+    public GameObject winPanel;
+    [SerializeField]
     private GameObject[] heart;
+    [SerializeField]
+    private GameObject[] marcianito;
+
     [SerializeField]
     private float tiempoSpawn;
     private float timePass;
     [SerializeField]
     private float minimX, minimZ, maxX, maxZ;
-    [SerializeField]
-    private GameObject[] marcianito;
-
     private bool canShoot = true;
     public bool isDead = false;
 
     [SerializeField]
     private AudioClip kill;
+    [SerializeField]
+    private AudioClip gameOverSFX;
 
     [SerializeField]
     private int killCount;
     [SerializeField]
     private Text killText;
-
-    [SerializeField]
-    private AudioClip gameOverSFX;
     [SerializeField] 
     private GameObject particulasDisparo;
 
@@ -151,8 +153,18 @@ public class GiroscopioController : MonoBehaviour
         if (life <= 0)
         {
             AudioManager.instance.PlaySFX(gameOverSFX, transform.position);
+            AudioManager.instance.StopMusic();
             isDead = true;
             gameOver.SetActive(true);
+        }
+    }
+
+    public void Win()
+    {
+        if (killCount == 20)
+        {
+            isDead = true;
+            winPanel.SetActive(true);
         }
     }
 }
